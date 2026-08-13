@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant
 
-**Version 1.1.0 · 15 July 2026 · Production mirror of the deployed custom GPT**
+**Version 1.1.1 · 13 August 2026 · Production mirror of the deployed custom GPT**
 
 This is the spellbook for the **Contract Mechanism Review Assistant**, deployed at:
 
