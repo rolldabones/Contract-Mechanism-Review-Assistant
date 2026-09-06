@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant
 
-**Version 1.1.1 · 13 August 2026 · Production mirror of the deployed custom GPT**
+**Version 1.1.2 · 6 September 2026 · Production mirror of the deployed custom GPT**
 
 This is the spellbook for the **Contract Mechanism Review Assistant**, deployed at:
 
@@ -246,6 +246,12 @@ This repository is part of the [rolldabones governance ecosystem](https://github
 - [GRCnext-Copilot](https://github.com/rolldabones/GRCnext-Copilot) - the optionality assessor whose Contract Exit Review mode this assistant's analysis feeds
 - [definition-of-done](https://github.com/rolldabones/definition-of-done) - the define-and-confirm discipline behind the gates and the human decision boundary
 - [slow-ai-kitchen](https://github.com/rolldabones/slow-ai-kitchen) - the 12-step governed AI methodology the mode boundaries implement
+
+## How to Cite
+
+> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.1.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
+
+A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
 ## License
 
