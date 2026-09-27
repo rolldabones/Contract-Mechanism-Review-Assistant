@@ -1,10 +1,14 @@
 # Contract Mechanism Review Assistant
 
-**Version 1.1.2 · 6 September 2026 · Production mirror of the deployed custom GPT**
+**Version 1.1.3 · 28 September 2026 · Production mirror of the deployed custom GPT, retiring 11 December 2026**
 
 This is the spellbook for the **Contract Mechanism Review Assistant**, deployed at:
 
 **https://chatgpt.com/g/g-6959f89add988191af68e57d94edd9a3-contract-mechanism-review-assistant**
+
+> **Retirement notice, 28 September 2026 (KST).** OpenAI is retiring custom GPTs. Its [Custom GPT retirement and migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq), read on 28 September 2026, states that custom GPTs and their GPT pages become inaccessible on **11 December 2026**, or 11 February 2027 for Enterprise workspaces with an approved deferral. The Contract Mechanism Review Assistant will be retired on that date and will not be migrated. The link above stops working then.
+>
+> Everything needed to build your own stays published here: the instruction block and the configuration, including any knowledge files. OpenAI's replacement is the ChatGPT plugin, in which a GPT's instructions become a Skill and its knowledge files become reference files. Its [Plugins in ChatGPT and Codex](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt-and-codex) article, read the same day, offers plugin creation in supported ChatGPT Business and Enterprise workspaces, so check what your plan allows. The instruction block is not tied to ChatGPT and also serves as the custom instructions of any assistant that accepts them. A plugin does not inherit a GPT's selected model and custom actions do not transfer, so choose the model yourself and test before you rely on the output.
 
 It reads slowly, thinks conservatively, and writes with discipline.
 
@@ -249,7 +253,7 @@ This repository is part of the [rolldabones governance ecosystem](https://github
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.1.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
+> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.1.3. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
