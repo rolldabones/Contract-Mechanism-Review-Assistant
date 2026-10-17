@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant
 
-**Version 1.1.4 · 5 October 2026 · Production mirror of the deployed custom GPT, retiring 11 December 2026**
+**Version 1.1.5 · 17 October 2026 · Production mirror of the deployed custom GPT, retiring 11 December 2026**
 
 This is the spellbook for the **Contract Mechanism Review Assistant**, deployed at:
 
@@ -10,7 +10,7 @@ This is the spellbook for the **Contract Mechanism Review Assistant**, deployed 
 >
 > Everything needed to build your own stays published here: the instruction block and the configuration, including any knowledge files. OpenAI's replacement is the ChatGPT plugin, in which a GPT's instructions become a Skill and its knowledge files become reference files. Its [Plugins in ChatGPT and Codex](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt-and-codex) article, read the same day, offers plugin creation in supported ChatGPT Business and Enterprise workspaces, so check what your plan allows. The instruction block is not tied to ChatGPT and also serves as the custom instructions of any assistant that accepts them. A plugin does not inherit a GPT's selected model and custom actions do not transfer, so choose the model yourself and test before you rely on the output.
 
-It reads slowly, thinks conservatively, and writes with discipline.
+It reads slowly, thinks conservatively and writes with discipline.
 
 It treats every agreement as:
 
@@ -18,7 +18,7 @@ It treats every agreement as:
 - a business plan in clauses
 - a memorialization of future performance
 
-It produces clause-by-clause issue spotting, insert-ready edits, fallback positions, and a short deal-risk summary you can paste into an email.
+It produces clause-by-clause issue spotting, insert-ready edits, fallback positions and a short deal-risk summary you can paste into an email.
 
 This is part of the **Spellbook** series: building custom GPTs that behave like tools, not toys.
 
@@ -253,7 +253,7 @@ This repository is part of the [rolldabones governance ecosystem](https://github
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.1.4. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
+> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.1.5. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 

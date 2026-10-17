@@ -2,6 +2,14 @@
 
 All notable changes to this repository. Versions apply to the repository as a whole; all files version in lockstep. Prior versions are superseded, never silently overwritten.
 
+## v1.1.5 - 2026-10-17
+
+Mechanical patch, session T3 of the whole-account review of 15 October 2026 (doc section 8; reviewer report 11, item C4). The production mirror is unchanged.
+
+- `README.md`: two serial commas removed from the author's introduction. The two in the deployed Description field are part of the mirror and are left for session T4, which archives the deployed configuration.
+- Closing line added at the end of this file.
+- Masthead, How to Cite and `CITATION.cff` to 1.1.5 in lockstep.
+
 ## v1.1.4 - 2026-10-05
 
 Correction of substance to the retirement notice of the previous release. On 1 October 2026 the Contract Mechanism Review Assistant was converted to a private ChatGPT plugin, so the notice's statement that it would not be migrated was false.
@@ -49,3 +57,7 @@ License metadata sweep. An `SPDX-License-Identifier: CC-BY-NC-SA-4.0` line and t
 ## v1.0.0 - baseline
 
 - Initial README: spellbook framing, Origami Method build narrative, builder packet (name, description, starters, system instructions), live link. No LICENSE, CHANGELOG or tags.
+
+---
+
+**Final Liability rests with the Human.**
