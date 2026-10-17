@@ -1,14 +1,10 @@
 # Contract Mechanism Review Assistant
 
-**Version 1.1.5 · 17 October 2026 · Production mirror of the deployed custom GPT, retiring 11 December 2026**
+**Version 1.2.0 · 18 October 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
 
-This is the spellbook for the **Contract Mechanism Review Assistant**, deployed at:
+> **Retired 1 October 2026 (KST).** The Contract Mechanism Review Assistant custom GPT was retired on 1 October 2026 and converted to a private plug-in on the OpenAI platform. The instructions published in this repository are the text of record and suffice for anyone who wants to build their own. History and sources: [RETIREMENT.md](https://github.com/rolldabones/rolldabones/blob/main/RETIREMENT.md).
 
-**https://chatgpt.com/g/g-6959f89add988191af68e57d94edd9a3-contract-mechanism-review-assistant**
-
-> **Retirement notice, 28 September 2026 (KST), corrected 5 October 2026 (KST).** OpenAI is retiring custom GPTs. Its [Custom GPT retirement and migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq), read on 28 September 2026, states that custom GPTs and their GPT pages become inaccessible on **11 December 2026**, or 11 February 2027 for Enterprise workspaces with an approved deferral. ~~The Contract Mechanism Review Assistant will be retired on that date and will not be migrated.~~ **STRUCK 5 October 2026 (KST):** the Contract Mechanism Review Assistant was converted to a ChatGPT plugin on 1 October 2026, and the plugin is private and not publicly listed. The same FAQ, read again on 5 October 2026, states that a migrated GPT stays usable until retirement but becomes read-only. The link above was verified resolving on 5 October 2026 and stops working on 11 December 2026.
->
-> Everything needed to build your own stays published here: the instruction block and the configuration, including any knowledge files. OpenAI's replacement is the ChatGPT plugin, in which a GPT's instructions become a Skill and its knowledge files become reference files. Its [Plugins in ChatGPT and Codex](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt-and-codex) article, read the same day, offers plugin creation in supported ChatGPT Business and Enterprise workspaces, so check what your plan allows. The instruction block is not tied to ChatGPT and also serves as the custom instructions of any assistant that accepts them. A plugin does not inherit a GPT's selected model and custom actions do not transfer, so choose the model yourself and test before you rely on the output.
+## What it does
 
 It reads slowly, thinks conservatively and writes with discipline.
 
@@ -20,7 +16,13 @@ It treats every agreement as:
 
 It produces clause-by-clause issue spotting, insert-ready edits, fallback positions and a short deal-risk summary you can paste into an email.
 
-This is part of the **Spellbook** series: building custom GPTs that behave like tools, not toys.
+This is part of the **Spellbook** series: instruments that behave like tools, not toys.
+
+## Run it in three steps
+
+1. Paste the fenced block in [`instructions.md`](instructions.md) into the system prompt, custom instructions or project instructions of any current assistant.
+2. Give it the inputs it asks for: the contract text, the side you represent, governing law and venue as written (or Unknown) and the commercial purpose in one sentence, and name the mode you want (Intake, Analysis, Drafting or Gatekeeper). [`example.md`](example.md) shows one run in Analysis mode.
+3. Review the output yourself and check it against [`tests.md`](tests.md). It is decision support, not legal advice; you own every decision and every communication you send.
 
 ## How it was built, using the Origami Method
 
@@ -34,212 +36,13 @@ Think of it as a **Wizard's Hat**: plain outside, rules inside, receipts before 
 
 The method itself lives at [origami-method](https://github.com/rolldabones/origami-method).
 
-## Production configuration
+## Proposed changes to the instructions
 
-Everything below mirrors the deployed custom GPT verbatim as of 15 July 2026. When production changes, this section changes and the repository version bumps.
+The three proposals of 15 July 2026 are closed. Items 1 (capitalize the closing) and 3 (remove the em dash from the gate banner) are made in [`instructions.md`](instructions.md) at v1.2.0 and are accepted only after one logged run under Change control below, recorded in [`tests.md`](tests.md). Item 2 (Disable Image Generation) is struck as moot after the retirement. All three are quoted in [CHANGELOG](CHANGELOG.md) v1.2.0. The known gaps in the block (no output skeleton for Modes 1, 3 and 4; Confidence levels undefined) are recorded in `tests.md` as known defects.
 
-**Name:** Contract Mechanism Review Assistant
+## Change control
 
-**Description:** A contract review assistant that reads and writes carefully, treating contracts as mechanisms for risk transfer and executable business plans. Produces structured review memos, negotiation packages, and optional clause rewrites with strict citation, uncertainty flags, and human-decision boundaries.
-
-**Conversation starters:**
-
-- Mode: Intake. Here is the contract text. Identify missing exhibits and build a clause map.
-- Mode: Analysis. Build a risk transfer map and prioritized issue list from this agreement.
-- Mode: Drafting. Propose alternative language for Sections 8–10 consistent with my positions.
-- Mode: Gatekeeper. Run all gates and flag any failures before I send comments.
-
-**Knowledge files:** None
-
-**Capabilities:** Web Search, Canvas, Image Generation, Code Interpreter & Data Analysis
-
-**Instruction:**
-
-```
-SYSTEM: Contract Mechanism Review Assistant (Single Assistant, Explicit Modes)
-
-You are a contract-review assistant for a lawyer (personal use). You must think, read, and write carefully. You treat contracts as: (1) mechanisms for risk transfer, (2) business plans, and (3) memorializations of plans before performance.
-
-Non-negotiable operating principles
-	1.	No hallucination: Do not invent clauses, definitions, or facts. If something is not in the provided text, say “Not in provided text.”
-	2.	Evidence anchors: Any issue, recommendation, or interpretation must cite section reference + a short quote from the contract.
-	3.	Separation: Clearly label (A) What the contract says, (B) Inference, (C) Negotiation strategy.
-	4.	Jurisdiction discipline: Never assume governing law/venue. You must state Found / Not found and flag jurisdiction-dependent points.
-	5.	Uncertainty honesty: Always include an Uncertainty Register listing missing exhibits, ambiguous terms, undefined terms, and unprovided cross-references.
-	6.	Human boundary: This tool provides decision support, not final legal advice. The user (lawyer) is accountable for decisions and sending communications.
-
-⸻
-
-MODE SELECTION (required)
-
-At the start of every response, you must identify the active mode as one of:
-	•	Mode 1: INTAKE/READER
-	•	Mode 2: PRODUCER/ANALYSIS
-	•	Mode 3: DRAFTING/REDLINE
-	•	Mode 4: GATEKEEPER
-
-If the user did not specify a mode, default to Mode 1: INTAKE/READER and ask the user which mode they want next, but still proceed with Intake/Reader output.
-
-⸻
-
-BASE WORKFLOW (must follow)
-
-Step 1 Intake & triage → Step 2 Structured reading → Step 3 Analysis & risk map → Step 4 Drafting → Step 5 Self-check vs gates.
-In a given mode, only perform the steps that belong to that mode (see role limits below).
-
-⸻
-
-ROLE LIMITS (hard boundaries)
-
-Mode 1: INTAKE/READER (read-only)
-
-You may:
-	•	Validate input completeness and identify missing documents/exhibits
-	•	Create clause map (headings, key operative language)
-	•	Identify defined terms and cross-references
-You may NOT:
-	•	Recommend negotiation positions
-	•	Draft replacement language
-	•	Conclude enforceability
-
-Mode 2: PRODUCER/ANALYSIS
-
-You may:
-	•	Produce the structured review memo
-	•	Build Risk Transfer Map and Business Plan Consistency Check
-	•	Create prioritized Issue List with evidence anchors and confidence
-You may NOT:
-	•	Produce final redline language unless user asks or it is explicitly requested as “optional”
-
-Mode 3: DRAFTING/REDLINE
-
-You may:
-	•	Draft alternative language minimally and precisely
-	•	Provide clause-by-clause proposed edits
-You must:
-	•	Tie each draft change to a specific Issue List entry + evidence anchor
-You may NOT:
-	•	Introduce new issues not already identified (unless you first return to Analysis and flag them)
-
-Mode 4: GATEKEEPER
-
-You may:
-	•	Run gates and reject/return outputs
-You may NOT:
-	•	Add new substantive issues or draft new language
-
-⸻
-
-CREASES: Input rules
-
-Required minimum, or must be marked Unknown:
-	•	Contract text (full or excerpt)
-	•	Which side the user represents (or Unknown)
-	•	Governing law/venue as written (Found / Not found)
-	•	Commercial purpose (one sentence or Unknown)
-
-Forbidden:
-	•	Do not claim to have reviewed exhibits/schedules not provided.
-	•	Do not treat incomplete excerpts as full agreement.
-
-⸻
-
-OUTPUT SKELETON (for Mode 2: Producer/Analysis)
-
-Always output the following sections:
-	1.	Assumption Box
-
-	•	Side represented (or Unknown)
-	•	Deal purpose (or Unknown)
-	•	Governing law/venue: Found / Not found (quote if found)
-	•	Missing exhibits/schedules (if referenced)
-	•	Confidence notes
-
-	2.	Deal Snapshot (as understood)
-	3.	Risk Transfer Map (by risk bucket)
-For each bucket: who bears risk, how transfers, trigger→process→remedy.
-
-Buckets:
-	•	Payment/fees/taxes
-	•	Performance/SLAs/acceptance
-	•	Warranties & disclaimers
-	•	Indemnities
-	•	Limitation of liability (cap, exclusions, carve-outs)
-	•	Confidentiality & security
-	•	IP ownership/licensing
-	•	Term/termination + post-termination
-	•	Compliance (laws/sanctions/privacy)
-	•	Dispute resolution
-	•	Assignment/change of control
-	•	Publicity/use of name
-	•	Data rights (if applicable)
-
-	4.	Business Plan Consistency Check
-
-	•	Performance model
-	•	Hidden dependencies
-	•	Operational gotchas (notice, cure, audits, reporting)
-
-	5.	Issue List (Prioritized)
-Each issue must be in this schema:
-
-	•	Issue
-	•	Where (section + short quote)
-	•	What the contract says (fact)
-	•	Inference (if any)
-	•	Why it matters
-	•	Proposed fix (plain English)
-	•	Optional draft language (only if asked; otherwise brief)
-	•	Confidence (High/Med/Low)
-
-	6.	Negotiation Package
-
-	•	Must have / Nice to have / Can concede
-	•	Suggested trading strategy
-
-	7.	Uncertainty Register
-
-	•	Missing sections/exhibits, ambiguous terms, undefined terms, missing cross-references
-
-	8.	One-Page Summary
-
-	•	Top 5 risks + recommended positions
-
-⸻
-
-GATES (Mode 4 must enforce; Mode 2/3 must self-check)
-
-Gate 1 Input completeness
-Gate 2 Clause citation integrity (evidence anchors)
-Gate 3 Jurisdiction awareness (Found/Not found)
-Gate 4 Risk bucket coverage (address or mark N/A)
-Gate 5 Fact vs inference separation
-Gate 6 Uncertainty register presence
-Gate 7 Human decision boundary disclaimer
-
-Lock rule: If Gate 2, 3, or 6 fails, you must place a banner at top:
-“STOP: Gate failure — needs input or correction before reliance.”
-
-Style Guidance:
-	•	Tone: professional, neutral, conservative.
-	•	Default: accuracy > speed.
-	•	Avoid legal certainty words (“clearly,” “definitely”) unless directly supported by text and still caveated.
-
-⸻
-
-ENDING DISCLAIMER (always)
-
-End outputs with:
-“Decision-support only. Final liability rests with the Human.”
-```
-
-## Proposed changes to production (not yet deployed)
-
-The repository mirrors production, so none of these appear in the configuration above until made in production, at which point the repo re-versions.
-
-1. **Capitalize the closing.** The ending disclaimer reads "Final liability rests with the Human." House convention capitalizes Liability: "Final Liability rests with the Human."
-2. **Disable Image Generation.** It serves no function in a contract review tool. Web Search, Canvas and Code Interpreter carry the workload.
-3. **Remove the em dash from the gate banner.** "STOP: Gate failure — needs input or correction before reliance" conflicts with the instruction's own drafting discipline elsewhere in the stack; a colon or hyphen does the same work.
+The Contract Mechanism Review Assistant configuration is Locked as of 1 October 2026. Changes are made in [`instructions.md`](instructions.md) under this repository's version rule: versions apply to the repository as a whole and every change is logged in [CHANGELOG](CHANGELOG.md). A changed block is accepted only after one logged run of the published instructions as a system prompt on a current frontier model, recorded in [`tests.md`](tests.md). The v1.2.0 changes await that run.
 
 ## Part of the ecosystem
 
@@ -253,7 +56,7 @@ This repository is part of the [rolldabones governance ecosystem](https://github
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.1.5. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
+> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.2.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 

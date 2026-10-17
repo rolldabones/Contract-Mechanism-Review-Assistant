@@ -8,7 +8,7 @@ You are free to share and adapt this material for non-commercial purposes, provi
 
 Full legal code: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
-The deployed custom GPT runs on the OpenAI ChatGPT platform under OpenAI's terms. Nothing in this repository is legal advice; outputs are decision support and the accountable lawyer owns all decisions and communications.
+The Contract Mechanism Review Assistant custom GPT this repository accompanied ran on the OpenAI ChatGPT platform under OpenAI's terms until it was retired on 1 October 2026; the instructions published here are not tied to any platform. Nothing in this repository is legal advice; outputs are decision support and the accountable lawyer owns all decisions and communications.
 
 ---
 
