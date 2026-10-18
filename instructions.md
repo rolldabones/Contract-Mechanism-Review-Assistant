@@ -6,7 +6,7 @@ As last verified against the Contract Mechanism Review Assistant custom GPT on 1
 
 ## How to use
 
-Paste everything inside the fenced block below, and nothing outside it, into the system prompt, custom instructions or project instructions of any current assistant. The block is self-contained: it assumes no tools, files, plug-ins or conversation starters. Then give it the contract text, the side you represent, governing law and venue as written and the commercial purpose, and name a mode (Intake, Analysis, Drafting or Gatekeeper); [`example.md`](example.md) shows one run. Check what it produces against [`tests.md`](tests.md). The block is Locked as of 1 October 2026 and changes only under the README's Change control; the v1.2.0 changes await the logged run recorded in `tests.md`.
+Paste everything inside the fenced block below, and nothing outside it, into the system prompt, custom instructions or project instructions of any current assistant. The block is self-contained: it assumes no tools, files, plug-ins or conversation starters. Then give it the contract text, the side you represent, governing law and venue as written and the commercial purpose, and name a mode (Intake, Analysis, Drafting or Gatekeeper); [`example.md`](example.md) shows one run. Check what it produces against [`tests.md`](tests.md). The block is Locked as of 1 October 2026 and changes only under the README's Change control; the first logged run (T5, 18 October 2026) is recorded in `tests.md`, and the v1.2.0 changes are not accepted while its open cases stand.
 
 ```text
 SYSTEM: Contract Mechanism Review Assistant (Single Assistant, Explicit Modes)

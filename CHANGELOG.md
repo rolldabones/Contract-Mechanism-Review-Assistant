@@ -2,6 +2,20 @@
 
 All notable changes to this repository. Versions apply to the repository as a whole; all files version in lockstep. Prior versions are superseded, never silently overwritten.
 
+## v1.2.1 - 2026-10-18
+
+Patch release, records only: session T5 of the whole-account review of 15 October 2026 (KST), review doc section 5 (untested instruments) and the T5 row of the session plan, the ruling 9 logged run of the block T4 changed at v1.2.0. Dated 18 October 2026 (KST). The instruction block is unchanged: SHA-256 `c0ced9e1c32f9c382ce320fea2b849c48349bec1b6b0335f183a8ede84df5205`, 5,697 characters, the fenced block of `instructions.md`.
+
+- **Run T5, 18 October 2026 (KST):** suite `cmra`, 17 cases C1 to C17, tested model `claude-opus-5-5`, scored by `claude-sonnet-5-5` (LLM scoring, developer testing, not independent assurance), API system prompt with the fenced block only, no tools, max_tokens 16,000, fictional contract excerpts and memos. **Scorer: 13 PASS, 4 FAIL** (C2, C3, C10, C13), none truncated.
+- **Session review of the four FAILs:** concur, model behavior, C2 (Negotiation Package recommendations cite "Issue N", not a section and quote) and C3 (unlabeled inference; strategy and inference in one statement); concur, instrument defect, C10 (K6) and C13 (K5); no dissent; no case defect. Four PASS verdicts spot-checked against their transcripts (C6, C11, C15, C17): concur.
+- **Acceptance:** not accepted, open cases C2, C3, C10 and C13 (tests.md: "A run passes when every case it exercises passes"). The cases on the lines changed at v1.2.0 pass (C15 banner, C17 closing). Reviewer: pending (Michael Paik).
+- **`tests.md`:** Last run rewritten as the run record (configuration, per-case table with scorer verdict and session review, counts, acceptance); known defects K5 ("Optional draft language" invites omission), K6 (the Mode 3 exception permits a same-response return to Analysis) and K7 (an issue about absent provisions cannot carry a quote) added from the run; K3 notes that a successor-configuration test record now exists; K4 notes the run; version line to v1.2.1.
+- **`evidence/transcripts-2026-10-18-T5/` (new):** the 17 transcripts with scores, copied byte for byte from the run output with only the closing line appended; `summary.json` unchanged; a `README.md` index. Model output is verbatim; its em dashes, serial commas and UK spellings are not edited.
+- **`README.md`:** Change control states the run's result in place of "The v1.2.0 changes await that run"; masthead and How to Cite to v1.2.1. **`instructions.md`:** the how-to-use sentence outside the fence points to the run record in place of "await the logged run". **`CITATION.cff`:** `version` 1.2.1, `date-released` 2026-10-18. In lockstep with this entry; the tag is v1.2.1.
+- **Findings by class (doc section 5 row 7; reviewer report 11 test and run items):** confirmed and closed by this record, no logged run (doc section 5) and no test record (report 11 B2, tests.md K3, for the successor configuration); already fixed, no worked example (report 11 B2, `example.md` at v1.2.0); not reproducible, none.
+- **Deferred, with reasons:** fixes for K5, K6 and K7, and for K1 and K2, are block changes and need a new block and a new run; the doc section 5 coverage matrix belongs to AI-GRC-Master-List-of-Questions and is not in the T5 row.
+- Shipped entries below are left as written (ruling 7 of 15 October 2026).
+
 ## v1.2.0 - 2026-10-18
 
 Minor release: instrument form after the GPT retirement. Session T4 of the whole-account review of 15 October 2026 (doc section 4, items 2 and 3; reviewer report 11, items A4, A10, A13, B1, B2 and C4), under determination D5 and ruling 9. The Contract Mechanism Review Assistant custom GPT was retired on 1 October 2026 and converted to a private plug-in on the OpenAI platform; nothing is verified against the plug-in. The instruction block is an instrument of this repository from 1 October 2026 and is editable under the version rule. Dated amendment, 18 October 2026 (KST): no earlier entry is re-dated or changed.

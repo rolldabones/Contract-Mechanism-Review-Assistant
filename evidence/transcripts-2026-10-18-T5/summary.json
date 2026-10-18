@@ -1,0 +1,99 @@
+{
+ "suite": "cmra",
+ "repo": "Contract-Mechanism-Review-Assistant",
+ "head": "53818e4",
+ "system_files": {
+  "../Claude outputs/T5-runs/suites/blocks/cmra-block.txt": "c0ced9e1c32f9c382ce320fea2b849c48349bec1b6b0335f183a8ede84df5205"
+ },
+ "tested_model": "claude-opus-5-5",
+ "scorer_model": "claude-sonnet-5-5",
+ "max_tokens": 16000,
+ "finished": "2026-10-18T10:25+09:00",
+ "results": [
+  {
+   "case": "C1",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C10",
+   "verdict": "FAIL",
+   "truncated": false
+  },
+  {
+   "case": "C11",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C12",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C13",
+   "verdict": "FAIL",
+   "truncated": false
+  },
+  {
+   "case": "C14",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C15",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C16",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C17",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C2",
+   "verdict": "FAIL",
+   "truncated": false
+  },
+  {
+   "case": "C3",
+   "verdict": "FAIL",
+   "truncated": false
+  },
+  {
+   "case": "C4",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C5",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C6",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C7",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C8",
+   "verdict": "PASS",
+   "truncated": false
+  },
+  {
+   "case": "C9",
+   "verdict": "PASS",
+   "truncated": false
+  }
+ ]
+}
