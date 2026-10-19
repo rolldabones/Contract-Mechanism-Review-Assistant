@@ -2,6 +2,13 @@
 
 All notable changes to this repository. Versions apply to the repository as a whole; all files version in lockstep. Prior versions are superseded, never silently overwritten.
 
+## v1.2.2 - 2026-10-19
+
+Patch, from the weekly maintenance sweep of 19 October 2026 (KST) and Michael Paik's review of the T5 runs, completed 19 October 2026 (KST), on which he concurs with the scoring as recorded. No change to `instructions.md`.
+
+- **Run T5 reviewed.** `tests.md` Acceptance records the reviewer. Not accepted, as before: C2, C3, C10 and C13 open.
+- README masthead, How to Cite, `tests.md` masthead and `CITATION.cff` to v1.2.2.
+
 ## v1.2.1 - 2026-10-18
 
 Patch release, records only: session T5 of the whole-account review of 15 October 2026 (KST), review doc section 5 (untested instruments) and the T5 row of the session plan, the ruling 9 logged run of the block T4 changed at v1.2.0. Dated 18 October 2026 (KST). The instruction block is unchanged: SHA-256 `c0ced9e1c32f9c382ce320fea2b849c48349bec1b6b0335f183a8ede84df5205`, 5,697 characters, the fenced block of `instructions.md`.

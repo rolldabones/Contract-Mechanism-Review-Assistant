@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant: tests
 
-**Cases, known defects and the run record for [`instructions.md`](instructions.md) · v1.2.1 · 18 October 2026 (KST)**
+**Cases, known defects and the run record for [`instructions.md`](instructions.md) · v1.2.2 · 19 October 2026 (KST)**
 
 Each case is derived from a rule in the block and quotes it. A run passes when every case it exercises passes; a case not exercised in a run is recorded as not run, never as passed. Run the cases against the block as published, pasted as the system prompt of the model under test, on fictional or anonymized contract text.
 
@@ -68,7 +68,7 @@ Recorded from reviewer report 11 (15 October 2026), session T4 and run T5 (18 Oc
 
 **Counts.** Scorer: 13 PASS, 4 FAIL, 0 UNSCORABLE, 0 truncated. Session review of the four FAILs: 2 concur, model behavior (C2, C3); 2 concur, instrument defect (C10, C13); 0 dissent; 0 case defect. Four PASS verdicts were spot-checked against their transcripts (C6, C11, C15, C17) and the session concurs.
 
-**Acceptance.** Under this file's rule ("A run passes when every case it exercises passes") the run does not pass: not accepted, open cases C2, C3, C10 and C13. The cases on the lines changed at v1.2.0 pass (C15 the gate banner, C17 the closing), and no output in the run carried a serial comma from the block; the block as a whole is not accepted under ruling 9 until a run passes every case. Reviewer: pending (Michael Paik). The instruction text is not changed in this release: a fix for K5 or K6 is a new block and needs a new run.
+**Acceptance.** Under this file's rule ("A run passes when every case it exercises passes") the run does not pass: not accepted, open cases C2, C3, C10 and C13. The cases on the lines changed at v1.2.0 pass (C15 the gate banner, C17 the closing), and no output in the run carried a serial comma from the block; the block as a whole is not accepted under ruling 9 until a run passes every case. Reviewer: Michael Paik, 19 October 2026 (KST), concurs. The instruction text is not changed in this release: a fix for K5 or K6 is a new block and needs a new run.
 
 [`example.md`](example.md) is an illustrative run, not a logged test run.
 

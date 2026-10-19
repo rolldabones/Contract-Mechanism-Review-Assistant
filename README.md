@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant
 
-**Version 1.2.1 · 18 October 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
+**Version 1.2.2 · 19 October 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
 
 > **Retired 1 October 2026 (KST).** The Contract Mechanism Review Assistant custom GPT was retired on 1 October 2026 and converted to a private plug-in on the OpenAI platform. The instructions published in this repository are the text of record and suffice for anyone who wants to build their own. History and sources: [RETIREMENT.md](https://github.com/rolldabones/rolldabones/blob/main/RETIREMENT.md).
 
@@ -56,7 +56,7 @@ This repository is part of the [rolldabones governance ecosystem](https://github
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.2.1. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
+> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.2.2. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
