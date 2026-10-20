@@ -2,7 +2,7 @@
 
 **Version 1.2.3 · 20 October 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
 
-> **Retired 1 October 2026 (KST).** The Contract Mechanism Review Assistant custom GPT was retired on 1 October 2026 and converted to a private plug-in on the OpenAI platform. The instructions published in this repository are the text of record and suffice for anyone who wants to build their own. History and sources: [RETIREMENT.md](https://github.com/rolldabones/rolldabones/blob/main/RETIREMENT.md).
+> **Retired 1 October 2026 (Korea Standard Time, KST).** The Contract Mechanism Review Assistant custom GPT was retired on 1 October 2026 and converted to a private plugin on the OpenAI platform. "Retired" here is the author's term for that conversion; OpenAI's Custom GPT retirement and migration FAQ, as read on 28 September 2026, gives 11 December 2026 as the date custom GPTs become inaccessible (see [CHANGELOG](CHANGELOG.md)). The instructions published in this repository are the text of record and suffice for anyone who wants to build their own. History and sources: [RETIREMENT.md](https://github.com/rolldabones/rolldabones/blob/main/RETIREMENT.md).
 
 ## What it does
 
@@ -20,7 +20,7 @@ This is part of the **Spellbook** series: instruments that behave like tools, no
 
 ## Run it in three steps
 
-1. Paste the fenced block in [`instructions.md`](instructions.md) into the system prompt, custom instructions or project instructions of any current assistant.
+1. Paste the fenced block in [`instructions.md`](instructions.md) into the system prompt, custom instructions or project instructions of any current assistant. The block as published is not accepted under this repository's change control (see Change control below).
 2. Give it the inputs it asks for: the contract text, the side you represent, governing law and venue as written (or Unknown) and the commercial purpose in one sentence, and name the mode you want (Intake, Analysis, Drafting or Gatekeeper). [`example.md`](example.md) shows one run in Analysis mode.
 3. Review the output yourself and check it against [`tests.md`](tests.md). It is decision support, not legal advice; you own every decision and every communication you send.
 
@@ -42,7 +42,7 @@ The three proposals of 15 July 2026 are closed. Items 1 (capitalize the closing)
 
 ## Change control
 
-The Contract Mechanism Review Assistant configuration is Locked as of 1 October 2026. Changes are made in [`instructions.md`](instructions.md) under this repository's version rule: versions apply to the repository as a whole and every change is logged in [CHANGELOG](CHANGELOG.md). A changed block is accepted only after one logged run of the published instructions as a system prompt on a current frontier model, recorded in [`tests.md`](tests.md). The first such run, T5 on 18 October 2026 (KST) on `claude-opus-5-5`, passed 13 of 17 cases; the block is not accepted while C2, C3, C10 and C13 are open, and the two instrument defects it found are recorded in `tests.md` as K5 and K6.
+The Contract Mechanism Review Assistant configuration is Locked as of 1 October 2026. Changes are made in [`instructions.md`](instructions.md) under this repository's version rule: versions apply to the repository as a whole and every change is logged in [CHANGELOG](CHANGELOG.md). A changed block is accepted only after one logged run of the published instructions as a system prompt on a current frontier model, recorded in [`tests.md`](tests.md). The first such run, T5 on 18 October 2026 (KST) on `claude-opus-5-5`, passed 13 of 17 cases; the block is not accepted while C2, C3, C10 and C13 are open, and the three instrument defects it found are recorded in `tests.md` as K5, K6 and K7.
 
 ## Part of the ecosystem
 

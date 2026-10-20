@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant: example run
 
-Illustrative run, not a logged test run under ruling 9. Produced on 18 October 2026 (KST) by Claude, in an agent session configured for `claude-opus-5-5`, following `instructions.md` as its operating instructions (not a bare system-prompt API call). Inputs are fictional.
+Illustrative run, not a logged test run under ruling 9. Produced on 18 October 2026 (Korea Standard Time, KST) by Claude, in an agent session configured for `claude-opus-5-5`, following `instructions.md` as its operating instructions (not a bare system-prompt API call). Inputs are fictional.
 
 Quillmere Software Ltd and Tallow Creek Foods Inc. are fictional companies and the clauses were written for this example. The run is one exchange in Mode 2 (Producer/Analysis): the user's input, then the instrument's output.
 
@@ -39,7 +39,7 @@ Quillmere Software Ltd and Tallow Creek Foods Inc. are fictional companies and t
 | Bucket | Who bears risk | How it transfers | Trigger → process → remedy |
 | --- | --- | --- | --- |
 | Payment/fees/taxes | Customer | s.4.2 lets Supplier raise Fees yearly with no stated cap | Anniversary → 30 days' notice → none stated for Customer. Taxes: Not in provided text |
-| Performance/SLAs/acceptance | Customer, beyond credits | s.6 "commercially reasonable efforts"; credits "sole and exclusive remedy" | SLA miss → credits per Exhibit B (not provided) → credits only. Acceptance: Not in provided text |
+| Performance/SLAs/acceptance | Customer, beyond credits | s.6 "commercially reasonable efforts"; credits "sole and exclusive remedy" | Service level agreement (SLA) miss → credits per Exhibit B (not provided) → credits only. Acceptance: Not in provided text |
 | Warranties & disclaimers | Unknown | Not in provided text | Not in provided text |
 | Indemnities | Unknown | Not in provided text | Not in provided text |
 | Limitation of liability | Both, weighted to Customer | s.9.1 excludes indirect loss and "loss of profits or data"; s.9.2 caps at three months' Fees; s.9.3 carves out fraud only | Claim → cap applies → recovery limited to three months' Fees |
@@ -105,10 +105,10 @@ Quillmere Software Ltd and Tallow Creek Foods Inc. are fictional companies and t
 
 **7. Uncertainty Register**
 
-- Missing: Order Form 1; Exhibit B; Sections 1 to 3, 5, 7, 8, 10, 12 and 13.
+- Missing: Order Form 1; Exhibit B; Sections 1 to 3, 5, 7, 8, 10, 12 and 13. Venue or forum for disputes: Not found.
 - Undefined terms in the provided text: "Fees", "Services", "Customer Data", "Effective Date".
 - Ambiguous: whether "loss of ... data" in s.9.1 excludes recovery for Supplier's loss of Customer Data.
-- Missing cross-references: venue or forum for disputes.
+- Missing cross-references: none in the provided text.
 
 **8. One-Page Summary**
 

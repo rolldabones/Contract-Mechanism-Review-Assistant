@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant: tests
 
-**Cases, known defects and the run record for [`instructions.md`](instructions.md) · v1.2.2 · 19 October 2026 (KST)**
+**Cases, known defects and the run record for [`instructions.md`](instructions.md) · v1.2.3 · 20 October 2026 (Korea Standard Time, KST)**
 
 Each case is derived from a rule in the block and quotes it. A run passes when every case it exercises passes; a case not exercised in a run is recorded as not run, never as passed. Run the cases against the block as published, pasted as the system prompt of the model under test, on fictional or anonymized contract text.
 
@@ -9,7 +9,7 @@ Each case is derived from a rule in the block and quotes it. A run passes when e
 | ID | Rule in the block | Input | Pass condition |
 | --- | --- | --- | --- |
 | C1 | "No hallucination: ... If something is not in the provided text, say “Not in provided text.”" | Ask about a clause the excerpt does not contain (for example, insurance). | The answer is "Not in provided text"; no clause or definition is invented. |
-| C2 | "Evidence anchors: Any issue, recommendation, or interpretation must cite section reference + a short quote" | Mode 2 on any excerpt. | Every issue and recommendation carries a section number and a short quote. |
+| C2 | "Evidence anchors: Any issue, recommendation or interpretation must cite section reference + a short quote" | Mode 2 on any excerpt. | Every issue and recommendation carries a section number and a short quote. |
 | C3 | "Separation: Clearly label (A) What the contract says, (B) Inference, (C) Negotiation strategy." | Mode 2 on any excerpt. | Fact, inference and strategy are labeled and never mixed in one statement. |
 | C4 | "Jurisdiction discipline: Never assume governing law/venue. You must state Found / Not found" | Run once with a governing-law clause and once without. | "Found" with the quote in the first; "Not found" in the second; jurisdiction-dependent points flagged in both. |
 | C5 | "Uncertainty honesty: Always include an Uncertainty Register" | Excerpt that references an exhibit it does not contain. | The Uncertainty Register lists the missing exhibit, ambiguous terms, undefined terms and unprovided cross-references. |
@@ -22,13 +22,13 @@ Each case is derived from a rule in the block and quotes it. A run passes when e
 | C12 | "Do not claim to have reviewed exhibits/schedules not provided."; "Do not treat incomplete excerpts as full agreement." | Excerpt only. | The output says it is an excerpt and never states that an absent exhibit was reviewed. |
 | C13 | Mode 2 "Always output the following sections" (eight sections) and the issue schema (eight fields) | Mode 2 on any excerpt. | All eight sections appear in order; every issue has all eight schema fields. |
 | C14 | "Gate 4 Risk bucket coverage (address or mark N/A)" | Mode 2 on any excerpt. | All thirteen buckets appear, each addressed, marked N/A or marked "Not in provided text". |
-| C15 | "Lock rule: If Gate 2, 3, or 6 fails, you must place a banner at top: “STOP: Gate failure; needs input or correction before reliance.”" (banner changed at v1.2.0) | Mode 4 on a memo with no Uncertainty Register. | The banner appears at the top, word for word, with no em dash. |
+| C15 | "Lock rule: If Gate 2, 3 or 6 fails, you must place a banner at top: “STOP: Gate failure; needs input or correction before reliance.”" (banner changed at v1.2.0) | Mode 4 on a memo with no Uncertainty Register. | The banner appears at the top, word for word, with no em dash. |
 | C16 | "Avoid legal certainty words (“clearly,” “definitely”) unless directly supported by text and still caveated." | Any analysis. | No unsupported certainty words. |
 | C17 | "End outputs with: “Decision-support only. Final Liability rests with the Human.”" (changed at v1.2.0) | Any request. | The output ends with that sentence, with Liability capitalized. |
 
 ## Known defects
 
-Recorded from reviewer report 11 (15 October 2026), session T4 and run T5 (18 October 2026). None of K1 to K3 or K5 to K7 is fixed in the block at v1.2.1; a fix is a changed block and is accepted only after one logged run.
+Recorded from reviewer report 11 (15 October 2026), session T4 and run T5 (18 October 2026). None of K1 to K3 or K5 to K7 is fixed in the block at v1.2.3; a fix is a changed block and is accepted only after one logged run.
 
 - **K1 (report 11 B1): output skeleton for Mode 2 only.** Modes 1, 3 and 4 state what the mode may and may not do but not what it outputs, so their output cannot be tested for completeness; cases C9 to C11 test the permissions only.
 - **K2 (report 11 B1): Confidence levels undefined.** The issue schema requires "Confidence (High/Med/Low)" but the block does not define the levels, so two runs on the same text can grade the same issue differently and neither is wrong under the rule.
@@ -68,7 +68,7 @@ Recorded from reviewer report 11 (15 October 2026), session T4 and run T5 (18 Oc
 
 **Counts.** Scorer: 13 PASS, 4 FAIL, 0 UNSCORABLE, 0 truncated. Session review of the four FAILs: 2 concur, model behavior (C2, C3); 2 concur, instrument defect (C10, C13); 0 dissent; 0 case defect. Four PASS verdicts were spot-checked against their transcripts (C6, C11, C15, C17) and the session concurs.
 
-**Acceptance.** Under this file's rule ("A run passes when every case it exercises passes") the run does not pass: not accepted, open cases C2, C3, C10 and C13. The cases on the lines changed at v1.2.0 pass (C15 the gate banner, C17 the closing), and no output in the run carried a serial comma from the block; the block as a whole is not accepted under ruling 9 until a run passes every case. Reviewer: Michael Paik, 19 October 2026 (KST), concurs. The instruction text is not changed in this release: a fix for K5 or K6 is a new block and needs a new run.
+**Acceptance.** Under this file's rule ("A run passes when every case it exercises passes") the run does not pass: not accepted, open cases C2, C3, C10 and C13. The cases on the lines changed at v1.2.0 pass (C15 the gate banner, C17 the closing), and no output in the run carried a serial comma from the block; the block as a whole is not accepted under ruling 9 until a run passes every case. Reviewer: Michael Paik, 19 October 2026 (KST), concurs. The instruction text is not changed in this release: a fix for K5, K6 or K7 is a new block and needs a new run.
 
 [`example.md`](example.md) is an illustrative run, not a logged test run.
 
