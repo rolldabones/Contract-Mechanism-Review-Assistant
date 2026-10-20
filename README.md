@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant
 
-**Version 1.2.3 · 20 October 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
+**Version 1.2.4 · 20 October 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
 
 > **Retired 1 October 2026 (Korea Standard Time, KST).** The Contract Mechanism Review Assistant custom GPT was retired on 1 October 2026 and converted to a private plugin on the OpenAI platform. "Retired" here is the author's term for that conversion; OpenAI's Custom GPT retirement and migration FAQ, as read on 28 September 2026, gives 11 December 2026 as the date custom GPTs become inaccessible (see [CHANGELOG](CHANGELOG.md)). The instructions published in this repository are the text of record and suffice for anyone who wants to build their own. History and sources: [RETIREMENT.md](https://github.com/rolldabones/rolldabones/blob/main/RETIREMENT.md).
 
@@ -14,7 +14,7 @@ It treats every agreement as:
 - a business plan in clauses
 - a memorialization of future performance
 
-It produces clause-by-clause issue spotting, insert-ready edits, fallback positions and a short deal-risk summary you can paste into an email.
+It produces clause-by-clause issue spotting, insert-ready edits and a short deal-risk summary you can paste into an email.
 
 This is part of the **Spellbook** series: instruments that behave like tools, not toys.
 
@@ -48,7 +48,7 @@ The Contract Mechanism Review Assistant configuration is Locked as of 1 October 
 
 This repository is part of the [rolldabones governance ecosystem](https://github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md). Nearest neighbors:
 
-- [master-prompt-for-in-house-legal-and-compliance](https://github.com/rolldabones/master-prompt-for-in-house-legal-and-compliance) - the general-purpose in-house workbench alongside this contract specialist
+- [master-prompt-for-in-house-legal-and-compliance](https://github.com/rolldabones/master-prompt-for-in-house-legal-and-compliance) - the master prompt: a system prompt that turns a general-purpose assistant into a disciplined in-house legal and compliance assistant, alongside this contract specialist
 - [origami-method](https://github.com/rolldabones/origami-method) - the stage-gated workflow discipline this assistant was built with
 - [GRCnext-Copilot](https://github.com/rolldabones/GRCnext-Copilot) - the optionality assessor whose Contract Exit Review mode this assistant's analysis feeds
 - [definition-of-done](https://github.com/rolldabones/definition-of-done) - the define-and-confirm discipline behind the gates and the human decision boundary
@@ -56,7 +56,7 @@ This repository is part of the [rolldabones governance ecosystem](https://github
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.2.3. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
+> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.2.4. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 

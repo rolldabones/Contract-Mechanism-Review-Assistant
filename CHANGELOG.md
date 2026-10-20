@@ -2,6 +2,20 @@
 
 All notable changes to this repository. Versions apply to the repository as a whole; all files version in lockstep. Prior versions are superseded, never silently overwritten.
 
+## v1.2.4 - 2026-10-20
+
+Patch, 20 October 2026 (KST). Independent review of 20 October 2026; changes made with Claude, approved by Michael Paik. No change to the fenced block of `instructions.md` (5,697 characters, SHA-256 unchanged); the block remains not accepted pending a logged run that passes every case.
+
+- **Test record (`tests.md`):** the C2 and C15 rule quotes now match the block (no serial commas, as at v1.2.0). C10 and C13 are reclassified from instrument defect to case defect, with the instrument defect (K6, K5) behind each, and the C2 Issue 9 anchor is recorded as a case defect (K7); the three pass conditions are rewritten to the words of the rule and have not been run. The scorer verdicts are unchanged. Known defects K8 (Mode 2 redline exception against the optional draft field) and K9 (mode label against the STOP banner on the top line) added. Masthead and the "fixed in the block at" version brought to this release.
+- **Erratum to v1.2.1:** that entry says the session review found "no case defect". As revised in this release, C10 and C13 are case defects.
+- **Example (`example.md`):** the output is shown as produced, not corrected; a note now states that it would fail C2 and C3 under the T5 scoring and that it lists the absent venue clause as a missing cross-reference.
+- **Evidence README:** states that the run cannot be reproduced from this repository (harness not published; fixtures only in the transcripts; scored pass conditions and fail indicators differ from `tests.md`), that the scorer text refers to fields not in the files, and that the `summary.json` digest key is the maintainer's local path.
+- **README:** the retirement line glosses "retired" as the author's conversion to a private plugin on 1 October 2026, against OpenAI's date of 11 December 2026 (also in `LICENSE.md` author prose); "Run it in three steps" says the block is not accepted under change control; three instrument defects (K5, K6 and K7), not two; "fallback positions" dropped from What it does, since the block has no such output; the master-prompt neighbor line uses the ecosystem map's role wording. How to Cite keeps its publisher, which `CITATION.cff` cannot carry at the top level (a format limit of CFF 1.2.0).
+- **Plain statements for internal labels:** in `tests.md`, `example.md` and the evidence README, "ruling 9" is replaced by the Change control rule it names and report, session and block labels by dates. Earlier entries in this file are kept as cut and still use those labels; "ruling 9" there is the README Change control rule.
+- **House style:** "plugin" for "plug-in" in README and the `instructions.md` how-to; KST (Korea Standard Time) spelled out at first use in each file.
+- **Version:** README masthead, How to Cite, `CITATION.cff` and the `tests.md` masthead to v1.2.4.
+- **Findings applied:** CMR-01, CMR-02, CMR-03, CMR-04, CMR-05, CMR-06, CMR-07, CMR-08, CMR-09, CMR-10, CMR-11, CMR-12, CMR-13, CMR-15, CMR-17, CMR-18, X-04.
+
 ## v1.2.3 - 2026-10-20
 
 - LICENSE: two defects against the Creative Commons legal code corrected (the space in 'ShareAlike. In'; the CC0 sentence of the closing notice). Operative terms unchanged.
