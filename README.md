@@ -1,6 +1,8 @@
 # Contract Mechanism Review Assistant
 
-**Version 1.2.4 · 20 October 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
+**Version 1.2.5 · 26 October 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
+
+**Acceptance status ([ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), 26 October 2026, KST):** Not accepted. Run T5 (18 October 2026) passed every critical case but 9 of 13 others (69 percent, below 80), and C10 and C13 have pass conditions rewritten on 20 October 2026 that no run has exercised. The account's status table is in [ECOSYSTEM.md](https://github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md#instrument-status).
 
 > **Retired 1 October 2026 (Korea Standard Time, KST).** The Contract Mechanism Review Assistant custom GPT was retired on 1 October 2026 and converted to a private plugin on the OpenAI platform. "Retired" here is the author's term for that conversion; OpenAI's Custom GPT retirement and migration FAQ, as read on 28 September 2026, gives 11 December 2026 as the date custom GPTs become inaccessible (see [CHANGELOG](CHANGELOG.md)). The instructions published in this repository are the text of record and suffice for anyone who wants to build their own. History and sources: [RETIREMENT.md](https://github.com/rolldabones/rolldabones/blob/main/RETIREMENT.md).
 
@@ -30,7 +32,9 @@ This is part of the **Spellbook** series: instruments that behave like tools, no
 2. Build a context packet: objective, boundaries, definition of done
 3. Classify risk high enough to justify strict gates
 4. Define creases: inputs, outputs, exclusions
-5. Run the workflow: read → analyze → draft → gatekeep, test on real cases, log minimal folds, then lock
+5. Run the workflow: read → analyze → draft → gatekeep, then lock
+
+The author uses this instrument regularly to review contracts, not for their clauses but for the underlying economics: who bears which risk, what each party has committed to execute, and where the money and the exposure actually sit. Live uses cannot be described here because of Client confidentiality; the published test record is the fictional suite in [`tests.md`](tests.md).
 
 Think of it as a **Wizard's Hat**: plain outside, rules inside, receipts before magic.
 
@@ -56,7 +60,7 @@ This repository is part of the [rolldabones governance ecosystem](https://github
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.2.4. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
+> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.2.5. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 
