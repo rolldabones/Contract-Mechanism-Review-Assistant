@@ -2,6 +2,11 @@
 
 All notable changes to this repository. Versions apply to the repository as a whole; all files version in lockstep. Prior versions are superseded, never silently overwritten.
 
+## v1.2.6 - 2026-11-03
+
+- `tests.md`, Known defects: the provenance line names the reviews by date, not by label; no defect, case or run record changed; acceptance unchanged.
+- README, `tests.md` and `CITATION.cff` to v1.2.6. Train C of the improvement rotation (review of 24 October 2026). Prepared with Claude, approved by Michael Paik.
+
 ## v1.2.5 - 2026-10-26
 
 Patch release. Acceptance restated as a tolerance: the tests file is now read under the account rule, [ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), names its critical cases and records the instrument's status under that rule (not accepted: 9 of 13 non-critical cases, C10 and C13 not exercised); the README carries the same status below its masthead. No rule in the instrument changed and no run was made; the edits are to the test record and the front door. Train A of the whole-account review of 24 October 2026 (KST); prepared with Claude, approved by Michael Paik.
