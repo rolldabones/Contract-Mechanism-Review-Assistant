@@ -2,6 +2,13 @@
 
 All notable changes to this repository. Versions apply to the repository as a whole; all files version in lockstep. Prior versions are superseded, never silently overwritten.
 
+## v1.2.7 - 2026-11-09
+
+Patch release. Train D of the improvement rotation (review of 24 October 2026). Prepared with Claude, approved by Michael Paik.
+
+- README, License: one line points to `rolldabones/LICENSING.md` (v1.0.0, new), which states once what the account's two licenses permit, that a Client's use in its own operations may fall outside NonCommercial, how to ask and why the two licenses do not mix.
+- README, `tests.md` and `CITATION.cff` to v1.2.7; no other file changed.
+
 ## v1.2.6 - 2026-11-03
 
 - `tests.md`, Known defects: the provenance line names the reviews by date, not by label; no defect, case or run record changed; acceptance unchanged.

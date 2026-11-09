@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant: tests
 
-**Cases, known defects and the run record for [`instructions.md`](instructions.md) · v1.2.6 · 3 November 2026 (Korea Standard Time, KST)**
+**Cases, known defects and the run record for [`instructions.md`](instructions.md) · v1.2.7 · 9 November 2026 (Korea Standard Time, KST)**
 
 Each case is derived from a rule in the block and quotes it. Acceptance is read under the account rule, [ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), from 26 October 2026; a case not exercised in a run is recorded as not run, never as passed. Run the cases against the block as published, pasted as the system prompt of the model under test, on fictional or anonymized contract text.
 
@@ -72,7 +72,7 @@ Recorded from the reviews of 15 and 20 October 2026 and run T5 (18 October 2026)
 
 **Acceptance.** Under this file's rule ("A run passes when every case it exercises passes") the run does not pass: not accepted, open cases C2, C3, C10 and C13. C2 and C3 fail on model behavior; C10 and C13 have pass conditions rewritten at v1.2.4 that no run has yet exercised, and a case not run is not passed. The cases on the lines changed at v1.2.0 pass (C15 the gate banner, C17 the closing), and no output in the run carried a serial comma from the block; the block as a whole is not accepted under the Change control rule until a run passes every case. Reviewer: Michael Paik, 19 October 2026 (KST), concurs; the case-defect reclassification of 20 October 2026 approved by Michael Paik. The instruction text is not changed in this release: a fix for any of K5 to K9 is a new block and needs a new run.
 
-**Status under [ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), 26 October 2026 (KST), unchanged at v1.2.6 (3 November 2026).** Not accepted. Run T5 (18 October 2026) passed every critical case but 9 of 13 others (69 percent, below 80), and C10 and C13 have pass conditions rewritten at v1.2.4 that no run has exercised. **Critical cases:** C1, C6, C12 and C15. The acceptance sentences above were written under this file's earlier rule and are kept as the record of that review. The reviewer's concurrence with the run as recorded is read as concurrence per case (ACCEPTANCE.md (e)); each failed case keeps the disposition its session review gives it (model behavior: accepted model behavior; instrument defect: fix in the next block; case defect: case defect).
+**Status under [ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), 26 October 2026 (KST), unchanged at v1.2.7 (9 November 2026).** Not accepted. Run T5 (18 October 2026) passed every critical case but 9 of 13 others (69 percent, below 80), and C10 and C13 have pass conditions rewritten at v1.2.4 that no run has exercised. **Critical cases:** C1, C6, C12 and C15. The acceptance sentences above were written under this file's earlier rule and are kept as the record of that review. The reviewer's concurrence with the run as recorded is read as concurrence per case (ACCEPTANCE.md (e)); each failed case keeps the disposition its session review gives it (model behavior: accepted model behavior; instrument defect: fix in the next block; case defect: case defect).
 
 [`example.md`](example.md) is an illustrative run, not a logged test run.
 
