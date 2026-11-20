@@ -2,6 +2,16 @@
 
 All notable changes to this repository. Versions apply to the repository as a whole; all files version in lockstep. Prior versions are superseded, never silently overwritten.
 
+## v1.5.0 - 2026-11-21
+
+Minor release: the repository gains a published artifact, the transcripts of run V140, the logged run of the block changed at v1.4.0, and the instrument is accepted with residuals on `claude-opus-5-5`. On Michael Paik's approval of 21 November 2026 (KST), after he read every sample (account-maintenance `DECISIONS.md` section A). No change to the fenced block of `instructions.md` (6,563 characters, SHA-256 unchanged since v1.4.0). Prepared with Claude, approved by Michael Paik.
+
+- **`evidence/transcripts-2026-11-21-V140/` (new):** a README with the configuration and result, and one transcript with its score per case, C1 to C17, on the fictional fixtures of run T5.
+- **`tests.md`:** Last run is V140: 15 of 17 scorer PASS, the four critical cases among them, 11 of the 13 others (84.6 percent); the reviewer read every sample and concurs on all 17; C2 is a residual defect to be fixed in the next block and C3 accepted model behavior. A paragraph records what the five fixes did. Known defects gain K12 (the Issue List citation route stops at the Negotiation Package), and the six defects fixed at v1.4.0 are marked as exercised by V140, K11 as not exercised. CR1 moves under its own heading, its status line marked superseded.
+- **README:** the acceptance status line restated; Run it in three steps and Change control say the block is accepted with residuals on `claude-opus-5-5` and on no other model.
+- **`instructions.md`:** the masthead says the block is unchanged since v1.4.0; the opening line and How to use name run V140 and the acceptance.
+- README, `tests.md`, `instructions.md` and `CITATION.cff` to v1.5.0.
+
 ## v1.4.0 - 2026-11-21
 
 Minor release: the fenced block of `instructions.md` changes, on the five fixes from run CR1 that Michael Paik approved on 21 November 2026 (KST) (account-maintenance `DECISIONS.md` section A). The block was 5,697 characters, 26f9fe91debd6be65d5a51013768d6f33dcd2625b0f5df8a23172dbed6bab95a-256 `c0ced9e1c32f9c382ce320fea2b849c48349bec1b6b0335f183a8ede84df5205`; it is now 6,563 characters, 26f9fe91debd6be65d5a51013768d6f33dcd2625b0f5df8a23172dbed6bab95a-256 `26f9fe91debd6be65d5a51013768d6f33dcd2625b0f5df8a23172dbed6bab95a`. Under the README's Change control the changed block is accepted only after one logged run, which has not been made. Prepared with Claude, approved by Michael Paik.

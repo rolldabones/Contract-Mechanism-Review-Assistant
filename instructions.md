@@ -1,12 +1,12 @@
 # Contract Mechanism Review Assistant: instructions
 
-**Instrument · v1.4.0 · 21 November 2026 (Korea Standard Time, KST) · text of record**
+**Instrument · v1.5.0, block unchanged since v1.4.0 · 21 November 2026 (Korea Standard Time, KST) · text of record**
 
-As last verified against the Contract Mechanism Review Assistant custom GPT on 15 July 2026, before the conversion, with the changes listed in [CHANGELOG](CHANGELOG.md) v1.2.0 and v1.4.0. The block changed at v1.4.0 has not yet had a logged run (see [`tests.md`](tests.md)).
+As last verified against the Contract Mechanism Review Assistant custom GPT on 15 July 2026, before the conversion, with the changes listed in [CHANGELOG](CHANGELOG.md) v1.2.0 and v1.4.0. The block changed at v1.4.0 is accepted with residuals on `claude-opus-5-5` by run V140 of 21 November 2026 (see [`tests.md`](tests.md)).
 
 ## How to use
 
-Paste everything inside the fenced block below, and nothing outside it, into the system prompt, custom instructions or project instructions of any current assistant. The block is self-contained: it assumes no tools, files, plugins or conversation starters. Then give it the contract text, the side you represent, governing law and venue as written and the commercial purpose, and name a mode (Intake, Analysis, Drafting or Gatekeeper); [`example.md`](example.md) shows one run. Check what it produces against [`tests.md`](tests.md). The block is Locked as of 1 October 2026 and changes only under the README's Change control; the logged runs T5 (18 October 2026) and CR1 (21 November 2026) are recorded in `tests.md`, and the block changed at v1.4.0 is not accepted until its own logged run.
+Paste everything inside the fenced block below, and nothing outside it, into the system prompt, custom instructions or project instructions of any current assistant. The block is self-contained: it assumes no tools, files, plugins or conversation starters. Then give it the contract text, the side you represent, governing law and venue as written and the commercial purpose, and name a mode (Intake, Analysis, Drafting or Gatekeeper); [`example.md`](example.md) shows one run. Check what it produces against [`tests.md`](tests.md). The block is Locked as of 1 October 2026 and changes only under the README's Change control; the logged runs T5 (18 October 2026), CR1 and V140 (both 21 November 2026) are recorded in `tests.md`, and V140 accepts the block changed at v1.4.0 with residuals on `claude-opus-5-5` only.
 
 ```text
 SYSTEM: Contract Mechanism Review Assistant (Single Assistant, Explicit Modes)
