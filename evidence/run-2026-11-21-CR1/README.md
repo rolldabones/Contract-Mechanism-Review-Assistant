@@ -95,7 +95,7 @@ Each free-text field the scorer returned was compared by code with the contract 
 
 ## Reproducibility
 
-The run cannot be reproduced from this repository: the documents are private and the harness is not published. The configuration above, the SHA-256 of the block and the per-document scores are what a reader can check. Reviewer concurrence per case under ACCEPTANCE.md (e) is pending; see `tests.md`.
+The run cannot be reproduced from this repository: the documents are private and the harness is not published. The configuration above, the SHA-256 of the block and the per-document scores are what a reader can check. Reviewer concurrence under ACCEPTANCE.md (e): Michael Paik, 21 November 2026 (KST), concurred on the session's check; transcripts not read by the reviewer, on C2, C3 and C13 (repository v1.4.0); see `tests.md`.
 
 ---
 
