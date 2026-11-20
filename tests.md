@@ -1,6 +1,6 @@
 # Contract Mechanism Review Assistant: tests
 
-**Cases, known defects and the run record for [`instructions.md`](instructions.md) · v1.2.7 · 9 November 2026 (Korea Standard Time, KST)**
+**Cases, known defects and the run record for [`instructions.md`](instructions.md) · v1.3.0 · 21 November 2026 (Korea Standard Time, KST)**
 
 Each case is derived from a rule in the block and quotes it. Acceptance is read under the account rule, [ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), from 26 October 2026; a case not exercised in a run is recorded as not run, never as passed. Run the cases against the block as published, pasted as the system prompt of the model under test, on fictional or anonymized contract text.
 
@@ -39,8 +39,42 @@ Recorded from the reviews of 15 and 20 October 2026 and run T5 (18 October 2026)
 - **K7 (run T5, C2): an issue about absent provisions cannot carry a quote.** Principle 2 requires "section reference + a short quote from the contract" for any issue, and principle 1 requires "Not in provided text" for anything not in the text. An issue whose subject is a missing clause can satisfy only the second. In run T5 Issue 9 (core protections absent) was anchored "Not in provided text". A fix says how an absence issue is anchored.
 - **K8 (review of 20 October 2026): the Mode 2 redline exception overlaps the optional draft field.** Mode 2 "may NOT: Produce final redline language unless user asks or it is explicitly requested as “optional”". The two conditions overlap, and the issue schema field "Optional draft language (only if asked; otherwise brief)" states the permission a third way: the K5 ambiguity at a second location. A fix states one condition in one place.
 - **K9 (review of 20 October 2026): the mode label and the STOP banner compete for the top line.** "At the start of every response, you must identify the active mode" and the lock rule "place a banner at top" both claim the first line, and the block does not say which comes first. The C15 scorer raised it ("whether the mode line above the banner counts against 'at the top'"). A fix states the order.
+- **K10 (run CR1, C13): the issue schema thins as the list grows.** In five of eight CR1 memos the later, lower-priority issues dropped required fields, most often "Why it matters" and the fact field, while the first issues carried all of them. "Each issue must be in this schema" does not say that it holds however long the list. A fix states that every issue carries every field and that a shorter memo lists fewer issues, not thinner ones.
+- **K11 (run CR1, C2): the Mode 2 self-check does not catch its own anchor gaps.** Gate 2 is a lock gate, and Mode 2 "must self-check" it, yet in the two CR1 memos that failed C2 the memo raised no STOP banner. The block does not say what a Mode 2 memo does when its own self-check fails. A fix states that a failed self-check of Gate 2, 3 or 6 places the banner, or that Mode 2 lists its gate results.
+
+**Corroborated by run CR1 (21 November 2026).** K2: no memo used Low across 145 issues, and all eight used split or intermediate ratings ("High on the text; Med on effect", "Medium-High"). K5: the optional draft field appeared on every issue in two memos, on some in three and on none in three. K7: absence issues were anchored to adjacent quoted text, to "Not in provided text" or to both, with no consistent form. K8: two memos carried short draft wording that was not asked for. K9 was not exercised: no memo raised the banner. K1 cannot be observed in a Mode 2 run.
+
+## Proposed fixes from run CR1 (not applied)
+
+Each is a change to the block and, under the README's Change control, is accepted only after its own logged run. None is made in this release.
+
+1. **C3 (seven of eight memos, and T5).** Add to principle 3: "Label every statement with exactly one of (A), (B) or (C); split a sentence that would need two. Risk Transfer Map cells and Business Plan Consistency Check bullets carry labels too."
+2. **C13, K10.** Add under the issue schema: "Every issue carries every field, whatever its priority. If the memo must be shorter, list fewer issues, not thinner ones."
+3. **C2, K7 and K11.** Add to principle 2: "An issue about an absent provision is anchored 'Not in provided text' with the section where it would be expected. Negotiation Package items cite the Issue List entry whose anchor they rely on." Add to the lock rule: "In Mode 2 or 3, a failed self-check of Gate 2, 3 or 6 places the banner."
+4. **K2.** Define the levels once: "High: the text is unambiguous and the consequence follows from it. Med: the text supports the reading but another is available. Low: the reading depends on facts or law not in the text. One rating per issue."
+5. **K5 and K8.** One rule in one place: "Optional draft language: always present; write 'Not requested' unless the user asked for drafting," with the Mode 2 redline exception pointing to it.
 
 ## Last run
+
+**Run CR1, 21 November 2026 (KST).** A private logged run of the published instructions in Mode 2 on eight long-form form contracts (two supply, two distribution, one license, one share purchase, one confidentiality agreement and one guaranty), named by type only, on Michael Paik's ruling of 20 November 2026. It answers K3: the first run on real-length contracts. Evidence: [`evidence/run-2026-11-21-CR1/`](evidence/run-2026-11-21-CR1/README.md), with the configuration, the documents by type and length, the scores, the reason for each FAIL and the defect observations. No contract text is in this repository.
+
+- **Instruction text:** the fenced block of [`instructions.md`](instructions.md), unchanged since v1.2.0, 5,697 characters, SHA-256 `c0ced9e1c32f9c382ce320fea2b849c48349bec1b6b0335f183a8ede84df5205` (repository HEAD `45dbdc2`, v1.2.7).
+- **Model:** `claude-opus-5-5`, max_tokens 32,000, temperature not set, one fresh session per document. **Scorer:** `claude-sonnet-5-5`. LLM scoring is developer testing, not independent assurance.
+- **Cases exercised:** C2, C3, C4, C5, C7, C12, C13, C14, C16 and C17. Not exercised: C1, C6, C8, C9, C10, C11 and C15.
+
+| Case | Passed | Disposition proposed (pending the reviewer) |
+| --- | --- | --- |
+| C2 | 6 of 8 | Fix in the next block (proposed fix 3); unanchored Negotiation Package items and lower-priority bullets, as in T5 |
+| C3 | 1 of 8 | Fix in the next block (proposed fix 1); the same failure as T5, now on seven documents |
+| C4, C5, C7, C14, C16, C17 | 8 of 8 | None needed |
+| C12 (critical) | 8 of 8 | None needed |
+| C13 | 3 of 8 | Fix in the next block (proposed fix 2, K10) |
+
+**Counts.** Scorer: 66 PASS and 14 FAIL of 80 verdicts, 0 UNSCORABLE, 0 truncated. **Reviewer:** concurrence per case under ACCEPTANCE.md (e) is pending; Michael Paik has not yet read the transcripts, which are kept privately.
+
+**Status under [ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), 21 November 2026 (KST), at v1.3.0.** Not accepted. No logged run of the published block has exercised all 17 cases and passed: run CR1 (21 November 2026, Mode 2 on eight long-form form contracts) exercised 10, and C3 failed on 7 of 8 documents, C13 on 5 and C2 on 2; run T5 (18 October 2026) passed 13 of 17. **Critical cases:** C1, C6, C12 and C15. CR1 cannot accept the block under condition (a), because it leaves seven cases unexercised; it is evidence on the Mode 2 cases at real length.
+
+## Run T5 (18 October 2026)
 
 **Run T5, 18 October 2026 (KST).** The first logged run of the published instructions under the README's Change control rule (a changed block is accepted only after one logged run of the published instructions as a system prompt on a current frontier model). Evidence: [`evidence/transcripts-2026-10-18-T5/`](evidence/transcripts-2026-10-18-T5/README.md), one transcript with its score per case and `summary.json`.
 
@@ -72,7 +106,7 @@ Recorded from the reviews of 15 and 20 October 2026 and run T5 (18 October 2026)
 
 **Acceptance.** Under this file's rule ("A run passes when every case it exercises passes") the run does not pass: not accepted, open cases C2, C3, C10 and C13. C2 and C3 fail on model behavior; C10 and C13 have pass conditions rewritten at v1.2.4 that no run has yet exercised, and a case not run is not passed. The cases on the lines changed at v1.2.0 pass (C15 the gate banner, C17 the closing), and no output in the run carried a serial comma from the block; the block as a whole is not accepted under the Change control rule until a run passes every case. Reviewer: Michael Paik, 19 October 2026 (KST), concurs; the case-defect reclassification of 20 October 2026 approved by Michael Paik. The instruction text is not changed in this release: a fix for any of K5 to K9 is a new block and needs a new run.
 
-**Status under [ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), 26 October 2026 (KST), unchanged at v1.2.7 (9 November 2026).** Not accepted. Run T5 (18 October 2026) passed every critical case but 9 of 13 others (69 percent, below 80), and C10 and C13 have pass conditions rewritten at v1.2.4 that no run has exercised. **Critical cases:** C1, C6, C12 and C15. The acceptance sentences above were written under this file's earlier rule and are kept as the record of that review. The reviewer's concurrence with the run as recorded is read as concurrence per case (ACCEPTANCE.md (e)); each failed case keeps the disposition its session review gives it (model behavior: accepted model behavior; instrument defect: fix in the next block; case defect: case defect).
+**Status under [ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), 26 October 2026 (KST), as recorded through v1.2.7 (9 November 2026) and superseded at v1.3.0 by the status under Last run.** Not accepted. Run T5 (18 October 2026) passed every critical case but 9 of 13 others (69 percent, below 80), and C10 and C13 have pass conditions rewritten at v1.2.4 that no run has exercised. **Critical cases:** C1, C6, C12 and C15. The acceptance sentences above were written under this file's earlier rule and are kept as the record of that review. The reviewer's concurrence with the run as recorded is read as concurrence per case (ACCEPTANCE.md (e)); each failed case keeps the disposition its session review gives it (model behavior: accepted model behavior; instrument defect: fix in the next block; case defect: case defect).
 
 [`example.md`](example.md) is an illustrative run, not a logged test run.
 

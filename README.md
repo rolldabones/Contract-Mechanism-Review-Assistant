@@ -1,8 +1,8 @@
 # Contract Mechanism Review Assistant
 
-**Version 1.2.7 · 9 November 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
+**Version 1.3.0 · 21 November 2026 · Instrument, formerly the Contract Mechanism Review Assistant custom GPT (retired 1 October 2026) · Instructions last verified against the GPT on 15 July 2026, before the conversion · License: [CC BY-NC-SA 4.0](LICENSE.md)**
 
-**Acceptance status ([ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), 26 October 2026, KST):** Not accepted. Run T5 (18 October 2026) passed every critical case but 9 of 13 others (69 percent, below 80), and C10 and C13 have pass conditions rewritten on 20 October 2026 that no run has exercised. The account's status table is in [ECOSYSTEM.md](https://github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md#instrument-status).
+**Acceptance status ([ACCEPTANCE.md](https://github.com/rolldabones/rolldabones/blob/main/ACCEPTANCE.md), 21 November 2026, KST):** Not accepted. No logged run of the published block has exercised all 17 cases and passed: run CR1 (21 November 2026, Mode 2 on eight long-form form contracts) exercised 10, and C3 failed on 7 of 8 documents, C13 on 5 and C2 on 2; run T5 (18 October 2026) passed 13 of 17. The account's status table is in [ECOSYSTEM.md](https://github.com/rolldabones/rolldabones/blob/main/ECOSYSTEM.md#instrument-status).
 
 > **Retired 1 October 2026 (Korea Standard Time, KST).** The Contract Mechanism Review Assistant custom GPT was retired on 1 October 2026 and converted to a private plugin on the OpenAI platform. "Retired" here is the author's term for that conversion; OpenAI's Custom GPT retirement and migration FAQ, as read on 28 September 2026, gives 11 December 2026 as the date custom GPTs become inaccessible (see [CHANGELOG](CHANGELOG.md)). The instructions published in this repository are the text of record and suffice for anyone who wants to build their own. History and sources: [RETIREMENT.md](https://github.com/rolldabones/rolldabones/blob/main/RETIREMENT.md).
 
@@ -46,7 +46,7 @@ The three proposals of 15 July 2026 are closed. Items 1 (capitalize the closing)
 
 ## Change control
 
-The Contract Mechanism Review Assistant configuration is Locked as of 1 October 2026. Changes are made in [`instructions.md`](instructions.md) under this repository's version rule: versions apply to the repository as a whole and every change is logged in [CHANGELOG](CHANGELOG.md). A changed block is accepted only after one logged run of the published instructions as a system prompt on a current frontier model, recorded in [`tests.md`](tests.md). The first such run, T5 on 18 October 2026 (KST) on `claude-opus-5-5`, passed 13 of 17 cases; the block is not accepted while C2, C3, C10 and C13 are open, and the three instrument defects it found are recorded in `tests.md` as K5, K6 and K7.
+The Contract Mechanism Review Assistant configuration is Locked as of 1 October 2026. Changes are made in [`instructions.md`](instructions.md) under this repository's version rule: versions apply to the repository as a whole and every change is logged in [CHANGELOG](CHANGELOG.md). A changed block is accepted only after one logged run of the published instructions as a system prompt on a current frontier model, recorded in [`tests.md`](tests.md). The first such run, T5 on 18 October 2026 (KST) on `claude-opus-5-5`, passed 13 of 17 cases; the block is not accepted while C2, C3, C10 and C13 are open, and the three instrument defects it found are recorded in `tests.md` as K5, K6 and K7. A second, private run, CR1 on 21 November 2026 (KST), put Mode 2 on eight long-form form contracts; its scores and defect observations are in [`evidence/run-2026-11-21-CR1/`](evidence/run-2026-11-21-CR1/README.md), two further defects (K10 and K11) and five proposed fixes are in `tests.md`, and the block is unchanged.
 
 ## Part of the ecosystem
 
@@ -60,7 +60,7 @@ This repository is part of the [rolldabones governance ecosystem](https://github
 
 ## How to Cite
 
-> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.2.7. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
+> Paik, Son-U Michael. *Contract Mechanism Review Assistant*, v1.3.0. GRC Solutions Korea, 2026. https://github.com/rolldabones/Contract-Mechanism-Review-Assistant
 
 A machine-readable citation is in [CITATION.cff](CITATION.cff).
 

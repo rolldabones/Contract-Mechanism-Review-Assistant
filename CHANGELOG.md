@@ -2,6 +2,15 @@
 
 All notable changes to this repository. Versions apply to the repository as a whole; all files version in lockstep. Prior versions are superseded, never silently overwritten.
 
+## v1.3.0 - 2026-11-21
+
+Minor release: the repository gains a published artifact, the evidence of run CR1. On Michael Paik's ruling of 20 November 2026 (account-maintenance `DECISIONS.md` section A). No change to the fenced block of `instructions.md` (5,697 characters, SHA-256 unchanged). Prepared with Claude, approved by Michael Paik.
+
+- **`evidence/run-2026-11-21-CR1/README.md` (new):** a private logged run of the published block in Mode 2 on eight long-form form contracts, named by type and length only: configuration, block SHA-256, the scores of ten cases per document, the reason for each FAIL, the K2, K5, K7, K8 and K9 observations and the confidentiality guard's record. No contract text.
+- **`tests.md`:** Last run is CR1 (66 of 80 verdicts PASS; C3 failed on 7 of 8 documents, C13 on 5, C2 on 2; C12, critical, passed on all 8), with proposed dispositions pending the reviewer; T5 moves under its own heading, unchanged except its status line, now marked superseded. Known defects gain K10 (the issue schema thins as the list grows) and K11 (the Mode 2 self-check does not raise the banner on its own anchor gaps), and a paragraph records what CR1 corroborates of K2, K5, K7 and K8. A new section lists five proposed fixes, none applied: a changed block needs its own logged run.
+- **README:** the acceptance status line restated for CR1 (still not accepted); Change control gains one sentence on CR1.
+- README, `tests.md` and `CITATION.cff` to v1.3.0.
+
 ## v1.2.7 - 2026-11-09
 
 Patch release. Train D of the improvement rotation (review of 24 October 2026). Prepared with Claude, approved by Michael Paik.
