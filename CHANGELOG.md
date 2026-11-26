@@ -2,6 +2,14 @@
 
 All notable changes to this repository. Versions apply to the repository as a whole; all files version in lockstep. Prior versions are superseded, never silently overwritten.
 
+## v1.5.1 - 2026-11-26
+
+Final release: the archived edition. On Michael Paik's ruling of 26 November 2026, recorded in [DISPOSITION.md](https://github.com/rolldabones/rolldabones/blob/main/DISPOSITION.md): the repository is archived in place as a dated edition and receives no corrections after this release. Prepared with Claude, approved by Michael Paik.
+
+- **README:** the archive banner under the title, with the edition date, the version to cite and where the maintained work is. Each acceptance line reads "Last test"; the status it states is unchanged, and no known defect is removed. The line says where the run record and the transcripts are and that they are frozen at this tag.
+- Nothing is removed, renamed or moved, and every other file is unchanged byte for byte.
+- README and `CITATION.cff` to v1.5.1.
+
 ## v1.5.0 - 2026-11-21
 
 Minor release: the repository gains a published artifact, the transcripts of run V140, the logged run of the block changed at v1.4.0, and the instrument is accepted with residuals on `claude-opus-5-5`. On Michael Paik's approval of 21 November 2026 (KST), after he read every sample (account-maintenance `DECISIONS.md` section A). No change to the fenced block of `instructions.md` (6,563 characters, SHA-256 unchanged since v1.4.0). Prepared with Claude, approved by Michael Paik.
